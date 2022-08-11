@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F82328A5676000D122CC /* AppDelegate.swift */; };
+		3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F82528A5676000D122CC /* SceneDelegate.swift */; };
+		3D38F82D28A5676400D122CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D38F82C28A5676400D122CC /* Assets.xcassets */; };
+		3D38F83028A5676400D122CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D38F82E28A5676400D122CC /* LaunchScreen.storyboard */; };
+		3D38F83B28A5676400D122CC /* idusHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F83A28A5676400D122CC /* idusHomeworkTests.swift */; };
+		3D38F84528A5676400D122CC /* idusHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F84428A5676400D122CC /* idusHomeworkUITests.swift */; };
+		3D38F84728A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */; };
+		3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85828A5691B00D122CC /* FirstViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D38F83728A5676400D122CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D38F81828A5676000D122CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D38F81F28A5676000D122CC;
+			remoteInfo = idusHomework;
+		};
+		3D38F84128A5676400D122CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D38F81828A5676000D122CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D38F81F28A5676000D122CC;
+			remoteInfo = idusHomework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D38F82028A5676000D122CC /* idusHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idusHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D38F82328A5676000D122CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D38F82528A5676000D122CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D38F82C28A5676400D122CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D38F82F28A5676400D122CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D38F83128A5676400D122CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D38F83628A5676400D122CC /* idusHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idusHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D38F83A28A5676400D122CC /* idusHomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkTests.swift; sourceTree = "<group>"; };
+		3D38F84028A5676400D122CC /* idusHomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idusHomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D38F84428A5676400D122CC /* idusHomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkUITests.swift; sourceTree = "<group>"; };
+		3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D38F85828A5691B00D122CC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D38F81D28A5676000D122CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83328A5676400D122CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83D28A5676400D122CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D38F81728A5676000D122CC = {
+			isa = PBXGroup;
+			children = (
+				3D38F82228A5676000D122CC /* idusHomework */,
+				3D38F83928A5676400D122CC /* idusHomeworkTests */,
+				3D38F84328A5676400D122CC /* idusHomeworkUITests */,
+				3D38F82128A5676000D122CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D38F82128A5676000D122CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F82028A5676000D122CC /* idusHomework.app */,
+				3D38F83628A5676400D122CC /* idusHomeworkTests.xctest */,
+				3D38F84028A5676400D122CC /* idusHomeworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D38F82228A5676000D122CC /* idusHomework */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F85728A568D700D122CC /* Configuration */,
+				3D38F85328A5681E00D122CC /* Model */,
+				3D38F85428A5682600D122CC /* View */,
+				3D38F85528A5682B00D122CC /* VIewModel */,
+				3D38F85628A568B200D122CC /* Network */,
+				3D38F82328A5676000D122CC /* AppDelegate.swift */,
+				3D38F82528A5676000D122CC /* SceneDelegate.swift */,
+				3D38F82C28A5676400D122CC /* Assets.xcassets */,
+				3D38F82E28A5676400D122CC /* LaunchScreen.storyboard */,
+				3D38F83128A5676400D122CC /* Info.plist */,
+			);
+			path = idusHomework;
+			sourceTree = "<group>";
+		};
+		3D38F83928A5676400D122CC /* idusHomeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F83A28A5676400D122CC /* idusHomeworkTests.swift */,
+			);
+			path = idusHomeworkTests;
+			sourceTree = "<group>";
+		};
+		3D38F84328A5676400D122CC /* idusHomeworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F84428A5676400D122CC /* idusHomeworkUITests.swift */,
+				3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */,
+			);
+			path = idusHomeworkUITests;
+			sourceTree = "<group>";
+		};
+		3D38F85328A5681E00D122CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D38F85428A5682600D122CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F85828A5691B00D122CC /* FirstViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D38F85528A5682B00D122CC /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		3D38F85628A568B200D122CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3D38F85728A568D700D122CC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D38F81F28A5676000D122CC /* idusHomework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D38F84A28A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomework" */;
+			buildPhases = (
+				3D38F81C28A5676000D122CC /* Sources */,
+				3D38F81D28A5676000D122CC /* Frameworks */,
+				3D38F81E28A5676000D122CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = idusHomework;
+			productName = idusHomework;
+			productReference = 3D38F82028A5676000D122CC /* idusHomework.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D38F83528A5676400D122CC /* idusHomeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D38F84D28A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomeworkTests" */;
+			buildPhases = (
+				3D38F83228A5676400D122CC /* Sources */,
+				3D38F83328A5676400D122CC /* Frameworks */,
+				3D38F83428A5676400D122CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D38F83828A5676400D122CC /* PBXTargetDependency */,
+			);
+			name = idusHomeworkTests;
+			productName = idusHomeworkTests;
+			productReference = 3D38F83628A5676400D122CC /* idusHomeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D38F83F28A5676400D122CC /* idusHomeworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D38F85028A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomeworkUITests" */;
+			buildPhases = (
+				3D38F83C28A5676400D122CC /* Sources */,
+				3D38F83D28A5676400D122CC /* Frameworks */,
+				3D38F83E28A5676400D122CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D38F84228A5676400D122CC /* PBXTargetDependency */,
+			);
+			name = idusHomeworkUITests;
+			productName = idusHomeworkUITests;
+			productReference = 3D38F84028A5676400D122CC /* idusHomeworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D38F81828A5676000D122CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3D38F81F28A5676000D122CC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3D38F83528A5676400D122CC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3D38F81F28A5676000D122CC;
+					};
+					3D38F83F28A5676400D122CC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3D38F81F28A5676000D122CC;
+					};
+				};
+			};
+			buildConfigurationList = 3D38F81B28A5676000D122CC /* Build configuration list for PBXProject "idusHomework" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D38F81728A5676000D122CC;
+			productRefGroup = 3D38F82128A5676000D122CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D38F81F28A5676000D122CC /* idusHomework */,
+				3D38F83528A5676400D122CC /* idusHomeworkTests */,
+				3D38F83F28A5676400D122CC /* idusHomeworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D38F81E28A5676000D122CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D38F83028A5676400D122CC /* LaunchScreen.storyboard in Resources */,
+				3D38F82D28A5676400D122CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83428A5676400D122CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83E28A5676400D122CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D38F81C28A5676000D122CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
+				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
+				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83228A5676400D122CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D38F83B28A5676400D122CC /* idusHomeworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D38F83C28A5676400D122CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D38F84528A5676400D122CC /* idusHomeworkUITests.swift in Sources */,
+				3D38F84728A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D38F83828A5676400D122CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D38F81F28A5676000D122CC /* idusHomework */;
+			targetProxy = 3D38F83728A5676400D122CC /* PBXContainerItemProxy */;
+		};
+		3D38F84228A5676400D122CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D38F81F28A5676000D122CC /* idusHomework */;
+			targetProxy = 3D38F84128A5676400D122CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D38F82E28A5676400D122CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D38F82F28A5676400D122CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D38F84828A5676400D122CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D38F84928A5676400D122CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D38F84B28A5676400D122CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = idusHomework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D38F84C28A5676400D122CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = idusHomework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D38F84E28A5676400D122CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/idusHomework.app/idusHomework";
+			};
+			name = Debug;
+		};
+		3D38F84F28A5676400D122CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/idusHomework.app/idusHomework";
+			};
+			name = Release;
+		};
+		3D38F85128A5676400D122CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = idusHomework;
+			};
+			name = Debug;
+		};
+		3D38F85228A5676400D122CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.idusHomeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = idusHomework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D38F81B28A5676000D122CC /* Build configuration list for PBXProject "idusHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D38F84828A5676400D122CC /* Debug */,
+				3D38F84928A5676400D122CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D38F84A28A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D38F84B28A5676400D122CC /* Debug */,
+				3D38F84C28A5676400D122CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D38F84D28A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D38F84E28A5676400D122CC /* Debug */,
+				3D38F84F28A5676400D122CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D38F85028A5676400D122CC /* Build configuration list for PBXNativeTarget "idusHomeworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D38F85128A5676400D122CC /* Debug */,
+				3D38F85228A5676400D122CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D38F81828A5676000D122CC /* Project object */;
+}
