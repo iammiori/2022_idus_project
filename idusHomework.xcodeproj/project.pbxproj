@@ -15,6 +15,7 @@
 		3D38F84528A5676400D122CC /* idusHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F84428A5676400D122CC /* idusHomeworkUITests.swift */; };
 		3D38F84728A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */; };
 		3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85828A5691B00D122CC /* FirstViewController.swift */; };
+		3D38F85C28A56DA500D122CC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85B28A56DA500D122CC /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D38F84428A5676400D122CC /* idusHomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkUITests.swift; sourceTree = "<group>"; };
 		3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D38F85828A5691B00D122CC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3D38F85B28A56DA500D122CC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +162,17 @@
 		3D38F85728A568D700D122CC /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				3D38F85A28A56D9700D122CC /* Extension */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3D38F85A28A56D9700D122CC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F85B28A56DA500D122CC /* Color.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
+				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
 			);
