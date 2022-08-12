@@ -20,6 +20,20 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         setNaviBarButton()
         setAttribute()
         setLayout()
+        
+        let networkService = NetworkService(configuration: .default)
+
+        // 퍼블리셔 구독
+        let subscription = networkService
+            .fetchInfo(appID: 872469884) //퍼블리셔
+            .receive(on: RunLoop.main)
+            //.print()
+            //.retry(3)
+            .sink { completion in
+                print("completion: \(completion)")
+            } receiveValue: { info in
+                print("Info :\(info)")
+            }
     }
     private func setNaviBarButton() {
         self.navigationItem.titleView = searchBar

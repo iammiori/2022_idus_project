@@ -20,6 +20,9 @@
 		3D38F86028A591F300D122CC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85F28A591F300D122CC /* Constant.swift */; };
 		3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86328A5984000D122CC /* SearchViewController.swift */; };
 		3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86628A6152000D122CC /* BaseViewController.swift */; };
+		3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86828A6588200D122CC /* AppStoreResponse.swift */; };
+		3D38F86B28A65D4100D122CC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86A28A65D4100D122CC /* NetworkService.swift */; };
+		3D38F86D28A65DA600D122CC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86C28A65DA600D122CC /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		3D38F85F28A591F300D122CC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3D38F86328A5984000D122CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3D38F86628A6152000D122CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3D38F86828A6588200D122CC /* AppStoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreResponse.swift; sourceTree = "<group>"; };
+		3D38F86A28A65D4100D122CC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3D38F86C28A65DA600D122CC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +117,7 @@
 				3D38F85328A5681E00D122CC /* Model */,
 				3D38F85428A5682600D122CC /* View */,
 				3D38F85528A5682B00D122CC /* VIewModel */,
-				3D38F85628A568B200D122CC /* Network */,
+				3D38F85628A568B200D122CC /* Service */,
 				3D38F82328A5676000D122CC /* AppDelegate.swift */,
 				3D38F82528A5676000D122CC /* SceneDelegate.swift */,
 				3D38F82C28A5676400D122CC /* Assets.xcassets */,
@@ -141,6 +147,7 @@
 		3D38F85328A5681E00D122CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D38F86828A6588200D122CC /* AppStoreResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,11 +168,13 @@
 			path = VIewModel;
 			sourceTree = "<group>";
 		};
-		3D38F85628A568B200D122CC /* Network */ = {
+		3D38F85628A568B200D122CC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				3D38F86A28A65D4100D122CC /* NetworkService.swift */,
+				3D38F86C28A65DA600D122CC /* NetworkError.swift */,
 			);
-			path = Network;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3D38F85728A568D700D122CC /* Configuration */ = {
@@ -341,13 +350,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D38F86B28A65D4100D122CC /* NetworkService.swift in Sources */,
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
 				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
+				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
 				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
 				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,
+				3D38F86D28A65DA600D122CC /* NetworkError.swift in Sources */,
 				3D38F86028A591F300D122CC /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
