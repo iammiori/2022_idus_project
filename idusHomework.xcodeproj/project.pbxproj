@@ -16,6 +16,10 @@
 		3D38F84728A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */; };
 		3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85828A5691B00D122CC /* FirstViewController.swift */; };
 		3D38F85C28A56DA500D122CC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85B28A56DA500D122CC /* Color.swift */; };
+		3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85D28A5804B00D122CC /* FirstSearchBarView.swift */; };
+		3D38F86028A591F300D122CC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F85F28A591F300D122CC /* Constant.swift */; };
+		3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86328A5984000D122CC /* SearchViewController.swift */; };
+		3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86628A6152000D122CC /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3D38F84628A5676400D122CC /* idusHomeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusHomeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D38F85828A5691B00D122CC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3D38F85B28A56DA500D122CC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3D38F85D28A5804B00D122CC /* FirstSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSearchBarView.swift; sourceTree = "<group>"; };
+		3D38F85F28A591F300D122CC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3D38F86328A5984000D122CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3D38F86628A6152000D122CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +148,8 @@
 		3D38F85428A5682600D122CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3D38F85828A5691B00D122CC /* FirstViewController.swift */,
+				3D38F86228A5982600D122CC /* FirstView */,
+				3D38F86128A5982000D122CC /* SearchView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +171,8 @@
 		3D38F85728A568D700D122CC /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				3D38F85F28A591F300D122CC /* Constant.swift */,
+				3D38F86528A6150F00D122CC /* Base */,
 				3D38F85A28A56D9700D122CC /* Extension */,
 			);
 			path = Configuration;
@@ -173,6 +184,31 @@
 				3D38F85B28A56DA500D122CC /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3D38F86128A5982000D122CC /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F86328A5984000D122CC /* SearchViewController.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		3D38F86228A5982600D122CC /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F85828A5691B00D122CC /* FirstViewController.swift */,
+				3D38F85D28A5804B00D122CC /* FirstSearchBarView.swift */,
+			);
+			path = FirstView;
+			sourceTree = "<group>";
+		};
+		3D38F86528A6150F00D122CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3D38F86628A6152000D122CC /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
+				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
+				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
+				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,
+				3D38F86028A591F300D122CC /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
