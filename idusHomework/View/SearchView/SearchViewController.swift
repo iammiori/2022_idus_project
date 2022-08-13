@@ -43,7 +43,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         return bt
     }()
     
-    let api = AppStoreAPIModel()
+    //let api = AppStoreAPIModel()
     let networkService = NetworkService(configuration: .default)
     
     @Published private(set) var appInfo: AppStoreResponse?
@@ -64,9 +64,9 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
                                       target: self,
                                       action: #selector(backButtonTapped(_:)))
         searchBtn = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
-                                        style: .done,
-                                        target: self,
-                                        action: #selector(searchButtonTapped(_:)))
+                                    style: .done,
+                                    target: self,
+                                    action: #selector(searchButtonTapped(_:)))
         navigationItem.leftBarButtonItem = backBtn
         checkSearchState(searchState: .unable)
         navigationItem.rightBarButtonItem = searchBtn
@@ -136,12 +136,15 @@ extension SearchViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @objc func searchButtonTapped(_ sender: UIBarButtonItem) {
-
+        
         guard let keyword = searchBar.text, !keyword.isEmpty else { return }
-        guard let url = api.searchAppInfo(appID: keyword).url else { return }
-    
-        let subscription = networkService
-            .fetchInfo(url: url)
+        let resource = NetworkResource<AppStoreResponse>(scheme: "http",
+                                                         host: "itunes.apple.com",
+                                                         path: "/lookup",
+                                                         params: ["id":keyword],
+                                                         header: [:],
+                                                         httpMethod: "GET")
+        networkService.fetchInfo(resource)
             .receive(on: RunLoop.main)
             .sink { completion in
                 print("completion: \(completion)")
