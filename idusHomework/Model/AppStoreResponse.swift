@@ -12,6 +12,7 @@ struct AppStoreResponse: Codable {
     let results: [AppStoreResult]
 }
 struct AppStoreResult: Codable {
+    let artworkUrl60: String
     let sellerName: String
     let description: String
     let screenshotUrls: [String]
