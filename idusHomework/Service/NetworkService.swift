@@ -15,11 +15,12 @@ final class NetworkService {
     session = URLSession(configuration: configuration)
     }
     
-    func fetchInfo(url: URL) -> AnyPublisher<AppStoreResponse, Error> {
-        //872469884
-
-        let publisher = session
-            .dataTaskPublisher(for: url)
+    func fetchInfo<T>(_ resource: NetworkResource<T>) -> AnyPublisher<T, Error> {
+        guard let request = resource.urlRequest else {
+            return Fail(error: NetworkError.invalidRequest).eraseToAnyPublisher()
+        }
+        return session
+            .dataTaskPublisher(for: request)
             .tryMap { result -> Data in
                 guard let httpResponse = result.response as? HTTPURLResponse,
                       (200..<300).contains(httpResponse.statusCode) else {
@@ -29,8 +30,7 @@ final class NetworkService {
                 }
                 return result.data
             }
-            .decode(type: AppStoreResponse.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher() 
-        return publisher
+            .decode(type: T.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 }
