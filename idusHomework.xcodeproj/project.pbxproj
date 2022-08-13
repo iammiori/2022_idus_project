@@ -23,6 +23,9 @@
 		3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86828A6588200D122CC /* AppStoreResponse.swift */; };
 		3D38F86B28A65D4100D122CC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86A28A65D4100D122CC /* NetworkService.swift */; };
 		3D38F86D28A65DA600D122CC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F86C28A65DA600D122CC /* NetworkError.swift */; };
+		3DA6E05D28A6DF5E00CEB3B0 /* AppStoreAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E05C28A6DF5E00CEB3B0 /* AppStoreAPIModel.swift */; };
+		3DA6E06228A79C8700CEB3B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */; };
+		3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		3D38F86828A6588200D122CC /* AppStoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreResponse.swift; sourceTree = "<group>"; };
 		3D38F86A28A65D4100D122CC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3D38F86C28A65DA600D122CC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3DA6E05C28A6DF5E00CEB3B0 /* AppStoreAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreAPIModel.swift; sourceTree = "<group>"; };
+		3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 		3D38F85328A5681E00D122CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DA6E05B28A6DF4700CEB3B0 /* API */,
 				3D38F86828A6588200D122CC /* AppStoreResponse.swift */,
 			);
 			path = Model;
@@ -157,6 +164,7 @@
 			children = (
 				3D38F86228A5982600D122CC /* FirstView */,
 				3D38F86128A5982000D122CC /* SearchView */,
+				3DA6E06028A79C5300CEB3B0 /* DetailView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				3D38F85B28A56DA500D122CC /* Color.swift */,
+				3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -218,6 +227,22 @@
 				3D38F86628A6152000D122CC /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		3DA6E05B28A6DF4700CEB3B0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6E05C28A6DF5E00CEB3B0 /* AppStoreAPIModel.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3DA6E06028A79C5300CEB3B0 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,12 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA6E06228A79C8700CEB3B0 /* DetailViewController.swift in Sources */,
 				3D38F86B28A65D4100D122CC /* NetworkService.swift in Sources */,
+				3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */,
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
 				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
+				3DA6E05D28A6DF5E00CEB3B0 /* AppStoreAPIModel.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
 				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
 				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,

@@ -13,7 +13,3 @@ struct ScreenConstant {
     static let deviceWidth = UIScreen.main.bounds.width
     static let deviceHeight = UIScreen.main.bounds.height
 }
-
-struct URLConstant {
-    static let appstoreSarchQueryID = "http://itunes.apple.com/lookup?id="
-}
