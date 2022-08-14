@@ -125,7 +125,8 @@ extension SearchViewController {
         searchBar.resignFirstResponder()
     }
     @objc func pushButtonTapped(_ sender: UIButton) {
-
+        let nextVC = DetailViewController(viewModel: viewModel.searchedModel.value!)
+        self.navigationController?.pushViewController(nextVC, animated: false)
     }
 }
 
