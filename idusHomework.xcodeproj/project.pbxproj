@@ -26,6 +26,9 @@
 		3DA6E06228A79C8700CEB3B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */; };
 		3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */; };
 		3DA6E06A28A7B66200CEB3B0 /* NetworkResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06928A7B66200CEB3B0 /* NetworkResource.swift */; };
+		3DA6E06E28A8069D00CEB3B0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E06D28A8069D00CEB3B0 /* SearchViewModel.swift */; };
+		3DA6E07428A8206900CEB3B0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */; };
+		3DA6E07628A8D6F400CEB3B0 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3DA6E06928A7B66200CEB3B0 /* NetworkResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResource.swift; sourceTree = "<group>"; };
+		3DA6E06D28A8069D00CEB3B0 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3D38F83A28A5676400D122CC /* idusHomeworkTests.swift */,
+				3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */,
 			);
 			path = idusHomeworkTests;
 			sourceTree = "<group>";
@@ -171,6 +178,8 @@
 		3D38F85528A5682B00D122CC /* VIewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3DA6E06F28A818F100CEB3B0 /* SearchView */,
+				3DA6E07028A818FB00CEB3B0 /* DetailView */,
 			);
 			path = VIewModel;
 			sourceTree = "<group>";
@@ -233,6 +242,22 @@
 			isa = PBXGroup;
 			children = (
 				3DA6E06128A79C8700CEB3B0 /* DetailViewController.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		3DA6E06F28A818F100CEB3B0 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6E06D28A8069D00CEB3B0 /* SearchViewModel.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		3DA6E07028A818FB00CEB3B0 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -373,6 +398,7 @@
 				3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */,
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
 				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
+				3DA6E06E28A8069D00CEB3B0 /* SearchViewModel.swift in Sources */,
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
@@ -381,6 +407,7 @@
 				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,
 				3D38F86D28A65DA600D122CC /* NetworkError.swift in Sources */,
 				3D38F86028A591F300D122CC /* Constant.swift in Sources */,
+				3DA6E07428A8206900CEB3B0 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA6E07628A8D6F400CEB3B0 /* SearchViewModelTests.swift in Sources */,
 				3D38F83B28A5676400D122CC /* idusHomeworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -532,7 +560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -566,7 +594,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -594,7 +622,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
