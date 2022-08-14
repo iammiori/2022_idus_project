@@ -17,3 +17,7 @@ struct AppStoreResult: Codable {
     let description: String
     let screenshotUrls: [String]
 }
+
+extension AppStoreResponse {
+    static let EMPTY = AppStoreResponse(resultCount: -1, results: [])
+}
