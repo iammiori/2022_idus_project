@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D273CEE28A918F9001A2115 /* ImageWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D273CED28A918F9001A2115 /* ImageWithLabelView.swift */; };
 		3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F82328A5676000D122CC /* AppDelegate.swift */; };
 		3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38F82528A5676000D122CC /* SceneDelegate.swift */; };
 		3D38F82D28A5676400D122CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D38F82C28A5676400D122CC /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D273CED28A918F9001A2115 /* ImageWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelView.swift; sourceTree = "<group>"; };
 		3D38F82028A5676000D122CC /* idusHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idusHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D38F82328A5676000D122CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D38F82528A5676000D122CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D273CEF28A92D60001A2115 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3D273CED28A918F9001A2115 /* ImageWithLabelView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		3D38F81728A5676000D122CC = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 				3D38F85F28A591F300D122CC /* Constant.swift */,
 				3D38F86528A6150F00D122CC /* Base */,
 				3D38F85A28A56D9700D122CC /* Extension */,
+				3D273CEF28A92D60001A2115 /* CustomView */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
+				3D273CEE28A918F9001A2115 /* ImageWithLabelView.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
 				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
 				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,
