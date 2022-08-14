@@ -28,6 +28,9 @@
 ### 🛠 MVVM
 - MVVM
 
+### ♻️ 재사용 가능한 Custom View
+- 여러번 쓰이는 뷰들을 custom view 따로 구현했습니다.
+
 ## 👬 더 나은 UX에 대한 고민
 <Blockquote>
 과제를 진행하면서 고민한 더 나은 UX를 적용한 부분입니다.
