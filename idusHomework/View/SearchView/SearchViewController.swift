@@ -8,10 +8,6 @@
 import UIKit
 import Combine
 
-enum SearchState {
-    case able
-    case unable
-}
 class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     let searchBar: UISearchBar = {
@@ -21,7 +17,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     }()
     let logoImageview: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .darkGray
+        iv.image = nil
         iv.layer.cornerRadius = 8
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
@@ -29,7 +25,6 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     }()
     let nameLabel: UILabel = {
         let lb = UILabel()
-        lb.text = "Hello"
         lb.textColor = .systemGray2
         lb.font = .systemFont(ofSize: 14, weight: .semibold)
         lb.sizeToFit()
@@ -39,18 +34,16 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     let pushButton: UIButton = {
         let bt = UIButton()
         bt.setTitle("상세보기", for: .normal)
-        bt.backgroundColor = .yellow
+        bt.backgroundColor = .blue
         return bt
     }()
     
-    //let api = AppStoreAPIModel()
-    let networkService = NetworkService(configuration: .default)
-    
-    @Published private(set) var appInfo: AppStoreResponse?
+    var viewModel: SearchViewModel!
     var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SearchViewModel(network: NetworkService(configuration: .default), searchedModel: AppStoreResponse.EMPTY)
         setNaviBarButton()
         setAttribute()
         setLayout()
@@ -68,11 +61,11 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
                                     target: self,
                                     action: #selector(searchButtonTapped(_:)))
         navigationItem.leftBarButtonItem = backBtn
-        checkSearchState(searchState: .unable)
+        changeSearchState(searchState: .unable)
         navigationItem.rightBarButtonItem = searchBtn
         navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
-    private func checkSearchState(searchState: SearchState) {
+    private func changeSearchState(searchState: SearchState) {
         switch searchState {
         case .unable:
             searchBtn.tintColor = .darkGray
@@ -85,6 +78,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     private func setAttribute() {
         searchBar.delegate = self
         searchBar.keyboardType = .asciiCapableNumberPad
+        searchBar.becomeFirstResponder()
         if #available(iOS 13.0, *) {
             searchBar.searchBarStyle = .default
             searchBar.searchTextField.backgroundColor = UIColor.black.withAlphaComponent(0.1)
@@ -111,23 +105,13 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         ])
     }
     private func bind() {
-        $appInfo
+        viewModel.searchedModel
             .receive(on: RunLoop.main)
-            .sink { [unowned self] result in
-                self.update(result)
+            .sink { [unowned self] _ in
+                self.nameLabel.text = self.viewModel.name
+                self.logoImageview.loadImagefromURL(stringURL: self.viewModel.logoImgURL)
+                self.pushButton.isHidden = self.viewModel.buttonHidden
             }.store(in: &subscriptions)
-    }
-    private func update(_ response: AppStoreResponse?) {
-        guard let response = response else {
-            self.nameLabel.text = "검색결과가 없어요"
-            return
-        }
-        if response.resultCount != 0 {
-            self.nameLabel.text = response.results[0].sellerName
-            self.logoImageview.loadImagefromURL(url: URL(string: response.results[0].artworkUrl60)!)
-        } else {
-            self.nameLabel.text = "검색결과가 없어요"
-        }
     }
 }
 
@@ -136,42 +120,21 @@ extension SearchViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @objc func searchButtonTapped(_ sender: UIBarButtonItem) {
-        
         guard let keyword = searchBar.text, !keyword.isEmpty else { return }
-        let resource = NetworkResource<AppStoreResponse>(scheme: "http",
-                                                         host: "itunes.apple.com",
-                                                         path: "/lookup",
-                                                         params: ["id":keyword],
-                                                         header: [:],
-                                                         httpMethod: "GET")
-        networkService.fetchInfo(resource)
-            .receive(on: RunLoop.main)
-            .sink { completion in
-                print("completion: \(completion)")
-                //에러처리
-                switch completion {
-                case .failure(let error):
-                    self.appInfo = nil
-                case .finished:
-                    break
-                }
-            } receiveValue: { appInfo in
-                self.appInfo = appInfo
-            }.store(in: &subscriptions)
+        viewModel.search(appID: keyword)
+        searchBar.resignFirstResponder()
     }
     @objc func pushButtonTapped(_ sender: UIButton) {
-        let nextVC = DetailViewController()
-        nextVC.appInfo = appInfo
-        self.navigationController?.pushViewController(nextVC, animated: false)
+
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
-            checkSearchState(searchState: .unable)
+            changeSearchState(searchState: .unable)
         } else {
-            checkSearchState(searchState: .able)
+            changeSearchState(searchState: .able)
         }
     }
 }
