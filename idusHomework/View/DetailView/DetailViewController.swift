@@ -73,6 +73,7 @@ class DetailViewController: BaseViewController {
             
             previewView.heightAnchor.constraint(equalToConstant: previewView.cellsize.height)
         ])
+
     }
     private func setCollectionView() {
         previewView.delegate = self
