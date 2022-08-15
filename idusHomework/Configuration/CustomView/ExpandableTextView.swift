@@ -16,8 +16,11 @@ class ExpandableTextView: UIView {
     
     let textView: UITextView = {
         let tv = UITextView()
+        tv.font = .systemFont(ofSize: 17, weight: .regular)
+        tv.textContainerInset = .init(top: 0, left: 18, bottom: 0, right: 18)
         tv.isEditable = false
-        tv.backgroundColor = .idusOrange
+        tv.isScrollEnabled = false
+        tv.textContainer.maximumNumberOfLines = 3
         return tv
     }()
     let expandableButton: UIButton = {
@@ -27,13 +30,9 @@ class ExpandableTextView: UIView {
         btn.tag = 0
         return btn
     }()
-    var basicHeight: NSLayoutConstraint?
-    var expandedHeight: NSLayoutConstraint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        basicHeight = textView.heightAnchor.constraint(equalToConstant: 100)
-        expandedHeight = textView.heightAnchor.constraint(equalToConstant: 200)
         setLayout()
     }
     
@@ -46,7 +45,6 @@ class ExpandableTextView: UIView {
             self.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-        basicHeight?.isActive = true
         NSLayoutConstraint.activate([
             textView.topAnchor.constraint(equalTo: self.topAnchor),
             textView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -61,11 +59,11 @@ class ExpandableTextView: UIView {
     func changeTextViewHeight(_ state: ExpandState) {
         switch state {
         case .basic:
-            self.basicHeight?.isActive = false
-            self.expandedHeight?.isActive = true
+            textView.textContainer.maximumNumberOfLines = 0
+            textView.invalidateIntrinsicContentSize()
         case .expand:
-            self.expandedHeight?.isActive = false
-            self.basicHeight?.isActive = true
+            textView.textContainer.maximumNumberOfLines = 3
+            textView.invalidateIntrinsicContentSize()
         }
     }
 }
