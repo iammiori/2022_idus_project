@@ -50,7 +50,7 @@ class ImageWithLabelView: UIView {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
             imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.2),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
         ])
@@ -65,7 +65,6 @@ class ImageWithLabelView: UIView {
             ])
         case .center:
             NSLayoutConstraint.activate([
-                imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
                 imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
                 
                 textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
