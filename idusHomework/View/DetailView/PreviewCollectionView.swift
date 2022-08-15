@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Combine
 
 class PreviewCollectionView: UICollectionView {
+    var subscriptions = Set<AnyCancellable>()
     let flowLayout = UICollectionViewFlowLayout()
  
     var cellsize: CGSize {
@@ -26,8 +28,19 @@ class PreviewCollectionView: UICollectionView {
         self.backgroundColor = nil
         self.showsHorizontalScrollIndicator = false
         self.isPagingEnabled = false
+        self.bounces = false
         self.decelerationRate = .fast
         flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumInteritemSpacing = 18
         self.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.registerID)
+    }
+    func bind(_ viewModel : DetailViewModel) {
+        viewModel.$appInfo
+            .receive(on: RunLoop.main)
+            .sink { [unowned self] _ in
+                DispatchQueue.main.async {
+                    self.reloadData()
+                }
+            }.store(in: &subscriptions)
     }
 }
