@@ -15,21 +15,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         sb.placeholder = "APP_ID를 입력해주세요."
         return sb
     }()
-    let logoImageview: UIImageView = {
-        let iv = UIImageView()
-        iv.image = nil
-        iv.layer.cornerRadius = 8
-        iv.contentMode = .scaleAspectFit
-        iv.clipsToBounds = true
-        return iv
-    }()
-    let nameLabel: UILabel = {
-        let lb = UILabel()
-        lb.textColor = .systemGray2
-        lb.font = .systemFont(ofSize: 14, weight: .semibold)
-        lb.sizeToFit()
-        return lb
-    }()
+    let searchedImgLabelView = ImageWithLabelView(align: .center)
     var searchBtn = UIBarButtonItem()
     let pushButton: UIButton = {
         let bt = UIButton()
@@ -86,30 +72,26 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         pushButton.addTarget(self, action: #selector(pushButtonTapped(_:)), for: .touchUpInside)
     }
     private func setLayout() {
-        [nameLabel,pushButton,logoImageview].forEach {
+        [pushButton,searchedImgLabelView].forEach {
             self.view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         NSLayoutConstraint.activate([
-            nameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            nameLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            searchedImgLabelView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            searchedImgLabelView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            searchedImgLabelView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             
             pushButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            pushButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
-            pushButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 12),
-            
-            logoImageview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            logoImageview.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -20),
-            logoImageview.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.2),
-            logoImageview.heightAnchor.constraint(equalTo: logoImageview.widthAnchor)
+            pushButton.topAnchor.constraint(equalTo: searchedImgLabelView.bottomAnchor, constant: 10),
+            pushButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 12)
         ])
     }
     private func bind() {
         viewModel.searchedModel
             .receive(on: RunLoop.main)
             .sink { [unowned self] _ in
-                self.nameLabel.text = self.viewModel.name
-                self.logoImageview.loadImagefromURL(stringURL: self.viewModel.logoImgURL)
+                self.searchedImgLabelView.textLabel.text = self.viewModel.name
+                self.searchedImgLabelView.imageView.loadImagefromURL(stringURL: self.viewModel.logoImgURL)
                 self.pushButton.isHidden = self.viewModel.buttonHidden
             }.store(in: &subscriptions)
     }
