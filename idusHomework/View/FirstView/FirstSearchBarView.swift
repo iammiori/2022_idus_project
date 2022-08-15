@@ -14,7 +14,7 @@ class FirstSearchBarView: UIView {
         lb.text = "APP_ID를 입력해주세요."
         lb.textColor = .systemGray2
         lb.font = .systemFont(ofSize: 14, weight: .semibold)
-        lb.sizeToFit()
+        //lb.sizeToFit()
         return lb
     }()
     let searchImageView: UIImageView = {
