@@ -13,7 +13,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     let imgView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .yellow
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
     }()
@@ -34,5 +34,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
         self.addSubview(imgView)
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.setEdgesAnchor(superView: self)
+    }
+    func setData(_ stringURL: String) {
+        self.imgView.loadImagefromURL(stringURL: stringURL)
     }
 }

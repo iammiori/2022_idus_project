@@ -11,6 +11,8 @@ import Combine
 class DetailViewController: BaseViewController {
 
     var viewModel: DetailViewModel?
+    var subscriptions = Set<AnyCancellable>()
+    
     var itemSpacing: CGFloat = 18.0
     
     let scrollView: UIScrollView = {
@@ -44,12 +46,11 @@ class DetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("dd:\(viewModel?.appInfo?.results[0].sellerName)")
         setAttribute()
         setLayout()
         setCollectionView()
         setExpandableButton(descriptionView.expandableButton)
+        bind()
     }
     
     private func setAttribute() {
@@ -95,17 +96,29 @@ class DetailViewController: BaseViewController {
             descriptionView.expandableButton.tag = 0
         }
     }
+    private func bind() {
+        viewModel?.$appInfo
+            .receive(on: RunLoop.main)
+            .sink { [unowned self] _ in
+                self.appInfoView.textLabel.text = self.viewModel?.appName
+                self.appInfoView.imageView.loadImagefromURL(stringURL: self.viewModel?.appLogoURL ?? "")
+                self.descriptionView.textView.text = self.viewModel?.description
+                self.previewView.bind(viewModel!)
+            }.store(in: &subscriptions)
+    }
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return viewModel!.numberOfpreviewArr
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.registerID, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
+        let eachURL = viewModel!.previewURLArr[indexPath.row]
+        cell.setData(eachURL)
         return cell
     }
 }
@@ -116,11 +129,8 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = previewView.cellsize.width + itemSpacing
-        let height = previewView.cellsize.height
+        let height = collectionView.bounds.height
         return CGSize(width: width, height: height)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return itemSpacing
     }
 }
 
@@ -131,7 +141,7 @@ extension DetailViewController: UIScrollViewDelegate {
             var offset = targetContentOffset.pointee
             let index = (offset.x + scrollView.contentInset.left) / cellWidth
             let roundedIndex: CGFloat = round(index)
-            offset = CGPoint(x: (roundedIndex * cellWidth - scrollView.contentInset.left) - itemSpacing, y: scrollView.contentInset.top)
+            offset = CGPoint(x: roundedIndex * cellWidth - (previewView.cellsize.width * 0.15), y: scrollView.contentInset.top)
             targetContentOffset.pointee = offset
         }
     }
