@@ -21,9 +21,10 @@ class DetailViewController: BaseViewController {
     }()
     let appInfoView = ImageWithLabelView(align: .leading)
     let previewView = PreviewCollectionView()
+    let descriptionView = ExpandableTextView()
     lazy var containStackView: UIStackView = {
         let sv = UIStackView()
-        [appInfoView, previewView].forEach { sv.addArrangedSubview($0) }
+        [appInfoView, previewView, descriptionView].forEach { sv.addArrangedSubview($0) }
         sv.axis = .vertical
         sv.spacing = 12
         sv.alignment = .fill
@@ -48,6 +49,7 @@ class DetailViewController: BaseViewController {
         setAttribute()
         setLayout()
         setCollectionView()
+        setExpandableButton(descriptionView.expandableButton)
     }
     
     private func setAttribute() {
@@ -57,7 +59,7 @@ class DetailViewController: BaseViewController {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(containStackView)
         
-        [scrollView, containStackView, previewView].forEach {
+        [scrollView, containStackView, previewView, descriptionView.textView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         containStackView.setEdgesAnchor(superView: self.scrollView)
@@ -71,10 +73,27 @@ class DetailViewController: BaseViewController {
             
             previewView.heightAnchor.constraint(equalToConstant: previewView.cellsize.height)
         ])
+
     }
     private func setCollectionView() {
         previewView.delegate = self
         previewView.dataSource = self
+    }
+    private func setExpandableButton(_ btn: UIButton) {
+        btn.addTarget(self, action: #selector(expandableBtnTapped(_:)), for: .touchUpInside)
+    }
+    @objc func expandableBtnTapped(_ sender: UIButton) {
+        if sender.tag == 0 {
+            descriptionView.changeTextViewHeight(.basic)
+            self.view.layoutIfNeeded()
+            descriptionView.expandableButton.setTitle("접기", for: .normal)
+            descriptionView.expandableButton.tag = 1
+        } else if sender.tag == 1 {
+            descriptionView.changeTextViewHeight(.expand)
+            self.view.layoutIfNeeded()
+            descriptionView.expandableButton.setTitle("펼치기", for: .normal)
+            descriptionView.expandableButton.tag = 0
+        }
     }
 }
 
