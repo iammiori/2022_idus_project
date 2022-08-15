@@ -1,5 +1,9 @@
 # 2022_idus_project
 2022 아이디어스 채용 과제 레포짓입니다.
+<Blockquote>
+- 과제 기간: 220811 ~ 220817 (7일)
+</Blockquote>
+
 
 ## ✅ 필수 요구사항 구현 여부
 <Blockquote>
@@ -10,6 +14,13 @@
 - [X] 위 API의 응답이 validate하다면, App Detail 페이지로 이동한다.
 - [X] 앱의 스크린샷 이미지들을 모두 탐색할 수 있다.
 - [X] ‘펼치기/접기’ 버튼으로 앱 설명 영역을 펼치고 접을 수 있다.
+
+## 🔥 추가 구현 내용
+<Blockquote>
+추가적으로 구현한 부분입니다. 
+</Blockquote>
+
+- [X] 검색결과가 없을때, 유저가 인지할 수 있도록 검색결과가 없음을 표시했습니다.
 
 ## 🛠 Architecture : MVVM
 <Blockquote>
