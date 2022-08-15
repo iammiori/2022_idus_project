@@ -13,3 +13,7 @@ struct ScreenConstant {
     static let deviceWidth = UIScreen.main.bounds.width
     static let deviceHeight = UIScreen.main.bounds.height
 }
+
+struct PreviewImg {
+    static let ratio: CGFloat = 696/392
+}
