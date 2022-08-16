@@ -20,7 +20,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     let pushButton: UIButton = {
         let bt = UIButton()
         bt.setTitle("상세보기", for: .normal)
-        bt.backgroundColor = .blue
+        bt.backgroundColor = .idusOrange
         return bt
     }()
     
@@ -93,6 +93,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
                 self.searchedImgLabelView.textLabel.text = self.viewModel.name
                 self.searchedImgLabelView.imageView.loadImagefromURL(stringURL: self.viewModel.logoImgURL)
                 self.pushButton.isHidden = self.viewModel.buttonHidden
+                self.searchedImgLabelView.imageView.isHidden = self.viewModel.buttonHidden
             }.store(in: &subscriptions)
     }
 }
