@@ -15,14 +15,14 @@ class ImageWithLabelView: UIView {
     
     let textLabel: UILabel = {
         let lb = UILabel()
-        lb.text = "test"
         lb.textColor = .black
         lb.font = .systemFont(ofSize: 15, weight: .regular)
         return lb
     }()
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = nil
+        //iv.image = UIImage(named: "nosearch")
+        iv.backgroundColor = .systemGray
         iv.layer.cornerRadius = 8
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
