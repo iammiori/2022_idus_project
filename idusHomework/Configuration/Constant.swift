@@ -17,5 +17,3 @@ struct ScreenConstant {
 struct PreviewImg {
     static let ratio: CGFloat = 2532/1170
 }
-
- 

@@ -12,7 +12,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     let imgView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .yellow
+        iv.backgroundColor = .systemGray
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
