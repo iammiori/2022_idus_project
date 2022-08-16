@@ -38,6 +38,8 @@
 		3DE26C1F28AB557700694F31 /* ExpandScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C1E28AB557700694F31 /* ExpandScreenImageViewController.swift */; };
 		3DE26C2228AB593A00694F31 /* ExpandScreenImgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2128AB593A00694F31 /* ExpandScreenImgViewModel.swift */; };
 		3DE26C2428AB745600694F31 /* ImgaeArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */; };
+		3DE26C2828ABDBE700694F31 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2728ABDBE700694F31 /* Date.swift */; };
+		3DE26C2A28ABF5C100694F31 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2928ABF5C100694F31 /* UITextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		3DE26C1E28AB557700694F31 /* ExpandScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandScreenImageViewController.swift; sourceTree = "<group>"; };
 		3DE26C2128AB593A00694F31 /* ExpandScreenImgViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandScreenImgViewModel.swift; sourceTree = "<group>"; };
 		3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgaeArrayModel.swift; sourceTree = "<group>"; };
+		3DE26C2728ABDBE700694F31 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		3DE26C2928ABF5C100694F31 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,8 @@
 				3D38F85B28A56DA500D122CC /* Color.swift */,
 				3DA6E06328A7A60F00CEB3B0 /* UIImageView.swift */,
 				3D273CF428A97A45001A2115 /* UIView.swift */,
+				3DE26C2728ABDBE700694F31 /* Date.swift */,
+				3DE26C2928ABF5C100694F31 /* UITextView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				3DE26C2428AB745600694F31 /* ImgaeArrayModel.swift in Sources */,
 				3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */,
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
+				3DE26C2828ABDBE700694F31 /* Date.swift in Sources */,
 				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
 				3D273CF228A97969001A2115 /* ImageCollectionViewCell.swift in Sources */,
 				3D7432FE28AA1082005C5579 /* ExpandableTextView.swift in Sources */,
@@ -469,6 +476,7 @@
 				3D273CEE28A918F9001A2115 /* ImageWithLabelView.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
 				3D273CF528A97A45001A2115 /* UIView.swift in Sources */,
+				3DE26C2A28ABF5C100694F31 /* UITextView.swift in Sources */,
 				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
 				3D38F85E28A5804B00D122CC /* FirstSearchBarView.swift in Sources */,
 				3D38F86D28A65DA600D122CC /* NetworkError.swift in Sources */,
