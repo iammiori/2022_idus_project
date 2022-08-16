@@ -27,6 +27,7 @@
 |<img width="230" alt="결과없을때" src="https://user-images.githubusercontent.com/46439995/184843053-9792b3b7-29b7-4c78-a892-117b24d26eeb.png">|<img width="230" alt="결과있을때" src="https://user-images.githubusercontent.com/46439995/184842588-4c19729a-132b-42c3-9b3b-d6da194e4903.png">
 
 - [X] 스크린샷 이미지를 눌렀을 때, 해당 이미지를 크게볼 수 있는 화면을 구현했습니다.(선택한 index로 바로 띄어지게끔 하였습니다)
+- [X] 버전정보와 최근 업데이트 내용을 불러오고, 몇일전에 업데이트를 진행하였는지 표시했습니다.
 
 ## 🛠 Architecture : MVVM
 <Blockquote>
