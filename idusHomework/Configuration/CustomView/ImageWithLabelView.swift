@@ -24,6 +24,7 @@ class ImageWithLabelView: UIView {
         let lb = UILabel()
         lb.textColor = .systemGray
         lb.font = .systemFont(ofSize: 15, weight: .regular)
+        lb.numberOfLines = 0
         return lb
     }()
     let imageView: UIImageView = {
