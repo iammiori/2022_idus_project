@@ -35,6 +35,9 @@
 		3DA6E07428A8206900CEB3B0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */; };
 		3DA6E07628A8D6F400CEB3B0 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */; };
 		3DE26C1C28AA6DCE00694F31 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C1B28AA6DCE00694F31 /* DetailViewModelTests.swift */; };
+		3DE26C1F28AB557700694F31 /* ExpandScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C1E28AB557700694F31 /* ExpandScreenImageViewController.swift */; };
+		3DE26C2228AB593A00694F31 /* ExpandScreenImgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2128AB593A00694F31 /* ExpandScreenImgViewModel.swift */; };
+		3DE26C2428AB745600694F31 /* ImgaeArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		3DE26C1B28AA6DCE00694F31 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		3DE26C1E28AB557700694F31 /* ExpandScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandScreenImageViewController.swift; sourceTree = "<group>"; };
+		3DE26C2128AB593A00694F31 /* ExpandScreenImgViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandScreenImgViewModel.swift; sourceTree = "<group>"; };
+		3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgaeArrayModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				3D38F86828A6588200D122CC /* AppStoreResponse.swift */,
+				3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 				3D38F86228A5982600D122CC /* FirstView */,
 				3D38F86128A5982000D122CC /* SearchView */,
 				3DA6E06028A79C5300CEB3B0 /* DetailView */,
+				3DE26C1D28AB553300694F31 /* ExpandScreenImgView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			children = (
 				3DA6E06F28A818F100CEB3B0 /* SearchView */,
 				3DA6E07028A818FB00CEB3B0 /* DetailView */,
+				3DE26C2028AB592600694F31 /* ExpandScreenImgView */,
 			);
 			path = VIewModel;
 			sourceTree = "<group>";
@@ -294,6 +303,22 @@
 				3DA6E07328A8206900CEB3B0 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		3DE26C1D28AB553300694F31 /* ExpandScreenImgView */ = {
+			isa = PBXGroup;
+			children = (
+				3DE26C1E28AB557700694F31 /* ExpandScreenImageViewController.swift */,
+			);
+			path = ExpandScreenImgView;
+			sourceTree = "<group>";
+		};
+		3DE26C2028AB592600694F31 /* ExpandScreenImgView */ = {
+			isa = PBXGroup;
+			children = (
+				3DE26C2128AB593A00694F31 /* ExpandScreenImgViewModel.swift */,
+			);
+			path = ExpandScreenImgView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +454,7 @@
 				3DA6E06228A79C8700CEB3B0 /* DetailViewController.swift in Sources */,
 				3DA6E06A28A7B66200CEB3B0 /* NetworkResource.swift in Sources */,
 				3D38F86B28A65D4100D122CC /* NetworkService.swift in Sources */,
+				3DE26C2428AB745600694F31 /* ImgaeArrayModel.swift in Sources */,
 				3DA6E06428A7A60F00CEB3B0 /* UIImageView.swift in Sources */,
 				3D38F85928A5691B00D122CC /* FirstViewController.swift in Sources */,
 				3D38F86428A5984000D122CC /* SearchViewController.swift in Sources */,
@@ -436,6 +462,8 @@
 				3D7432FE28AA1082005C5579 /* ExpandableTextView.swift in Sources */,
 				3DA6E06E28A8069D00CEB3B0 /* SearchViewModel.swift in Sources */,
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
+				3DE26C1F28AB557700694F31 /* ExpandScreenImageViewController.swift in Sources */,
+				3DE26C2228AB593A00694F31 /* ExpandScreenImgViewModel.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
 				3D273CEE28A918F9001A2115 /* ImageWithLabelView.swift in Sources */,
