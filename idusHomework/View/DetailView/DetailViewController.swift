@@ -121,28 +121,22 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.setData(eachURL)
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let previewImgURLS = viewModel!.previewURLArr
+        let extandVC = ExpandScreenImageViewController(viewModel: PreviewImgUrls(previewUrls: previewImgURLS),selectedIdx: indexPath.row)
+        extandVC.modalPresentationStyle = .fullScreen
+        extandVC.modalTransitionStyle = .coverVertical
+        self.present(extandVC, animated: true)
+    }
 }
 
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: itemSpacing, bottom: 0, right: itemSpacing)
+        return UIEdgeInsets(top: 0, left: itemSpacing, bottom: 0, right: itemSpacing) 
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = previewView.cellsize.width + itemSpacing
         let height = collectionView.bounds.height
         return CGSize(width: width, height: height)
-    }
-}
-
-extension DetailViewController: UIScrollViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if scrollView == previewView {
-            let cellWidth = previewView.cellsize.width + (itemSpacing*2)
-            var offset = targetContentOffset.pointee
-            let index = (offset.x + scrollView.contentInset.left) / cellWidth
-            let roundedIndex: CGFloat = round(index)
-            offset = CGPoint(x: roundedIndex * cellWidth - (previewView.cellsize.width * 0.15), y: scrollView.contentInset.top)
-            targetContentOffset.pointee = offset
-        }
     }
 }
