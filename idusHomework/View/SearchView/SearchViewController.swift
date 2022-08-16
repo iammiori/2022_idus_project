@@ -33,6 +33,7 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         setNaviBarButton()
         setAttribute()
         setLayout()
+        checkNetwork()
         bind()
     }
     
@@ -92,6 +93,16 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
             pushButton.topAnchor.constraint(equalTo: searchedImgLabelView.bottomAnchor, constant: 10),
             pushButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 12)
         ])
+    }
+    private func checkNetwork() {
+        if !CheckNetwork.shared.isConnected {
+            self.presentAlert(title: "인터넷이 연결되지 않았어요", message: "확인을 누르면 설정으로 이동합니다", isCancelActionIncluded: true) { action in
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }
     }
     private func bind() {
         viewModel.searchedModel
