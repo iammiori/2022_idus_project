@@ -26,6 +26,13 @@ final class DetailViewModel {
     func checkNumberOfLine(_ lineCount: Int) -> Bool {
         return lineCount < 4 ? true : false
     }
+    func convertByteToMB(_ byte: Int64) -> String {
+        let byteFormatter = ByteCountFormatter()
+        byteFormatter.allowedUnits = [.useMB]
+        byteFormatter.countStyle = .file
+        let strMB = byteFormatter.string(fromByteCount: byte)
+        return strMB
+    }
     
     var appName: String {
         return appInfo?.results[0].trackName ?? ""
@@ -66,5 +73,9 @@ final class DetailViewModel {
     }
     var numberOfpreviewArr: Int {
         return previewURLArr.count
+    }
+    var fileSizeMega: String {
+        let fileSize = Int64(appInfo?.results[0].fileSizeBytes ?? "0")
+        return "\(corpName)\n크기: \(convertByteToMB(fileSize!))"
     }
 }
