@@ -10,7 +10,7 @@ import Combine
 
 class DetailViewController: BaseViewController {
 
-    var viewModel: DetailViewModel?
+    var viewModel: DetailViewModel
     var subscriptions = Set<AnyCancellable>()
     
     var itemSpacing: CGFloat = 18.0
@@ -22,11 +22,12 @@ class DetailViewController: BaseViewController {
         return sv
     }()
     let appInfoView = ImageWithLabelView(align: .leading)
+    let versionView = ExpandableTextView()
     let previewView = PreviewCollectionView()
     let descriptionView = ExpandableTextView()
     lazy var containStackView: UIStackView = {
         let sv = UIStackView()
-        [appInfoView, previewView, descriptionView].forEach { sv.addArrangedSubview($0) }
+        [appInfoView, versionView, previewView, descriptionView].forEach { sv.addArrangedSubview($0) }
         sv.axis = .vertical
         sv.spacing = 12
         sv.alignment = .fill
@@ -50,11 +51,14 @@ class DetailViewController: BaseViewController {
         setLayout()
         setCollectionView()
         setExpandableButton(descriptionView.expandableButton)
+        setExpandableButton(versionView.expandableButton)
         bind()
     }
     
     private func setAttribute() {
-        
+        descriptionView.titleLabel.text = "앱 설명"
+        versionView.titleLabel.text = "새로운 기능"
+        versionView.expandableButton.tag = 2
     }
     private func setLayout() {
         self.view.addSubview(scrollView)
@@ -94,35 +98,51 @@ class DetailViewController: BaseViewController {
             self.view.layoutIfNeeded()
             descriptionView.expandableButton.setTitle("펼치기", for: .normal)
             descriptionView.expandableButton.tag = 0
+        } else if sender.tag == 2 {
+            versionView.changeTextViewHeight(.basic)
+            versionView.expandableButton.setTitle("접기", for: .normal)
+            versionView.expandableButton.tag = 3
+        } else if sender.tag == 3 {
+            versionView.changeTextViewHeight(.expand)
+            versionView.expandableButton.setTitle("펼치기", for: .normal)
+            versionView.expandableButton.tag = 2
         }
     }
     private func bind() {
-        viewModel?.$appInfo
+        viewModel.$appInfo
             .receive(on: RunLoop.main)
             .sink { [unowned self] _ in
-                self.appInfoView.textLabel.text = self.viewModel?.appName
-                self.appInfoView.imageView.loadImagefromURL(stringURL: self.viewModel?.appLogoURL ?? "")
-                self.descriptionView.textView.text = self.viewModel?.description
-                self.previewView.bind(viewModel!)
+                self.versionView.subTitleLabel.text = self.viewModel.versionWithDate
+                self.versionView.textView.text = self.viewModel.releaseNote
+                let numberOfLine: Int = self.versionView.textView.getNumberOfLine()
+                self.versionView.expandableButton.isHidden = self.viewModel.checkNumberOfLine(numberOfLine)
+                self.appInfoView.textLabel.text = self.viewModel.appName
+                self.appInfoView.subTitleLabel.text = self.viewModel.corpName
+                self.appInfoView.imageView.loadImagefromURL(stringURL: self.viewModel.appLogoURL)
+                self.descriptionView.textView.text = self.viewModel.description
+                let numberOfLine2: Int = descriptionView.textView.getNumberOfLine()
+                self.descriptionView.expandableButton.isHidden = self.viewModel.checkNumberOfLine(numberOfLine2)
+                self.previewView.bind(viewModel)
+                
             }.store(in: &subscriptions)
     }
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel!.numberOfpreviewArr
+        return viewModel.numberOfpreviewArr
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.registerID, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let eachURL = viewModel!.previewURLArr[indexPath.row]
+        let eachURL = viewModel.previewURLArr[indexPath.row]
         cell.setData(eachURL)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let previewImgURLS = viewModel!.previewURLArr
+        let previewImgURLS = viewModel.previewURLArr
         let extandVC = ExpandScreenImageViewController(viewModel: PreviewImgUrls(previewUrls: previewImgURLS),selectedIdx: indexPath.row)
         extandVC.modalPresentationStyle = .fullScreen
         extandVC.modalTransitionStyle = .coverVertical
