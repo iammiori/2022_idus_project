@@ -16,17 +16,31 @@ class ImageWithLabelView: UIView {
     let textLabel: UILabel = {
         let lb = UILabel()
         lb.textColor = .black
+        lb.font = .systemFont(ofSize: 17, weight: .bold)
+        lb.numberOfLines = 0
+        return lb
+    }()
+    let subTitleLabel: UILabel = {
+        let lb = UILabel()
+        lb.textColor = .systemGray
         lb.font = .systemFont(ofSize: 15, weight: .regular)
         return lb
     }()
     let imageView: UIImageView = {
         let iv = UIImageView()
-        //iv.image = UIImage(named: "nosearch")
         iv.backgroundColor = .systemGray
         iv.layer.cornerRadius = 8
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         return iv
+    }()
+    lazy var titleStackView: UIStackView = {
+        let sv = UIStackView()
+        [textLabel, subTitleLabel].forEach { sv.addArrangedSubview($0) }
+        sv.axis = .vertical
+        sv.spacing = 4
+        sv.distribution = .fill
+        return sv
     }()
     let align: Align
     
@@ -45,7 +59,7 @@ class ImageWithLabelView: UIView {
         self.backgroundColor = nil
     }
     private func setLayout() {
-        [textLabel, imageView].forEach {
+        [titleStackView, imageView].forEach {
             self.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -60,17 +74,19 @@ class ImageWithLabelView: UIView {
                 imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
                 imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12),
                 
-                textLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
-                textLabel.topAnchor.constraint(equalTo: imageView.topAnchor)
+                titleStackView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
+                titleStackView.topAnchor.constraint(equalTo: imageView.topAnchor)
             ])
+            titleStackView.alignment = .fill
         case .center:
             NSLayoutConstraint.activate([
                 imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
                 
-                textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-                textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
-                textLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4)
+                titleStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+                titleStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+                titleStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4)
             ])
+            titleStackView.alignment = .center
         }
     }
 }

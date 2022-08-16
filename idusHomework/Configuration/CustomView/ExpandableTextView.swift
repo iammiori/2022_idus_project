@@ -14,13 +14,25 @@ enum ExpandState {
 
 class ExpandableTextView: UIView {
     
+    let titleLabel: UILabel = {
+        let lb = UILabel()
+        lb.textColor = .black
+        lb.font = .systemFont(ofSize: 20, weight: .bold)
+        return lb
+    }()
+    let subTitleLabel: UILabel = {
+        let lb = UILabel()
+        lb.textColor = .systemGray
+        lb.font = .systemFont(ofSize: 15, weight: .regular)
+        return lb
+    }()
     let textView: UITextView = {
         let tv = UITextView()
         tv.font = .systemFont(ofSize: 17, weight: .regular)
-        tv.textContainerInset = .init(top: 0, left: 18, bottom: 0, right: 18)
+        tv.textContainerInset = .init(top: 0, left: 10, bottom: 0, right: 10)
         tv.isEditable = false
         tv.isScrollEnabled = false
-        tv.textContainer.maximumNumberOfLines = 3
+        tv.textContainer.maximumNumberOfLines = 4
         return tv
     }()
     let expandableButton: UIButton = {
@@ -29,6 +41,15 @@ class ExpandableTextView: UIView {
         btn.setTitleColor(UIColor.systemBlue, for: .normal)
         btn.tag = 0
         return btn
+    }()
+    lazy var titleStackView: UIStackView = {
+        let sv = UIStackView()
+        [titleLabel, subTitleLabel, textView].forEach { sv.addArrangedSubview($0) }
+        sv.axis = .vertical
+        sv.spacing = 12
+        sv.alignment = .fill
+        sv.distribution = .fill
+        return sv
     }()
     
     override init(frame: CGRect) {
@@ -41,18 +62,19 @@ class ExpandableTextView: UIView {
     }
     
     private func setLayout() {
-        [textView, expandableButton].forEach {
+        [titleStackView, expandableButton].forEach {
             self.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: self.topAnchor),
-            textView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            textView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            
-            expandableButton.trailingAnchor.constraint(equalTo: textView.trailingAnchor, constant: -18),
-            expandableButton.topAnchor.constraint(equalTo: textView.bottomAnchor, constant: 4),
+            titleStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            titleStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            titleStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+
+            expandableButton.trailingAnchor.constraint(equalTo: titleStackView.trailingAnchor, constant: -18),
+            expandableButton.topAnchor.constraint(equalTo: titleStackView.bottomAnchor, constant: 2),
             expandableButton.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            
         ])
     }
     

@@ -15,6 +15,18 @@ final class DetailViewModel {
         self.appInfo = appInfo
     }
     
+    let date = Date()
+    
+    func sliceDateFormat(str: String) -> String {
+        let startIdx = str.index(str.startIndex, offsetBy: 0)
+        let endIdx = str.index(str.startIndex, offsetBy: 9 )
+        let slicedStr = str[startIdx ... endIdx]
+        return String(slicedStr)
+    }
+    func checkNumberOfLine(_ lineCount: Int) -> Bool {
+        return lineCount < 4 ? true : false
+    }
+    
     var appName: String {
         return appInfo?.results[0].trackName ?? ""
     }
@@ -29,6 +41,28 @@ final class DetailViewModel {
     }
     var previewURLArr: [String] {
         return appInfo?.results[0].screenshotUrls ?? []
+    }
+    var releaseNote: String {
+        return appInfo?.results[0].releaseNotes ?? ""
+    }
+    var currentVersionReleaseDate: String {
+        let originDate = appInfo?.results[0].currentVersionReleaseDate ?? ""
+        let onlyDate = sliceDateFormat(str: originDate)
+        return onlyDate
+    }
+    var afterReleaseCount: String {
+        let nowDate = date
+        let releasDate = date.changeStringtoDate(strDate: currentVersionReleaseDate)
+        let interval = nowDate.timeIntervalSince(releasDate)
+        let count = Int(interval/86400)
+        return "\(count) 일전"
+        
+    }
+    var version: String {
+        return appInfo?.results[0].version ?? ""
+    }
+    var versionWithDate: String {
+        return "버전: \(version)  /  \(afterReleaseCount)"
     }
     var numberOfpreviewArr: Int {
         return previewURLArr.count
