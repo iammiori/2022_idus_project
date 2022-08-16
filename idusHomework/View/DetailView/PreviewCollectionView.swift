@@ -13,7 +13,7 @@ class PreviewCollectionView: UICollectionView {
     let flowLayout = UICollectionViewFlowLayout()
  
     var cellsize: CGSize {
-        let width = ScreenConstant.deviceWidth * 0.55
+        let width = ScreenConstant.deviceWidth * 0.6
         let height = width * PreviewImg.ratio
         return CGSize(width: width, height: height)
     }
@@ -28,10 +28,8 @@ class PreviewCollectionView: UICollectionView {
         self.backgroundColor = nil
         self.showsHorizontalScrollIndicator = false
         self.isPagingEnabled = false
-        self.bounces = false
         self.decelerationRate = .fast
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumInteritemSpacing = 18
         self.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.registerID)
     }
     func bind(_ viewModel : DetailViewModel) {
