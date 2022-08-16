@@ -30,7 +30,6 @@ final class DetailViewModel {
     var previewURLArr: [String] {
         return appInfo?.results[0].screenshotUrls ?? []
     }
-    
     var numberOfpreviewArr: Int {
         return previewURLArr.count
     }
