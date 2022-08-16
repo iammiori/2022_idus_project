@@ -40,6 +40,8 @@
 		3DE26C2428AB745600694F31 /* ImgaeArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */; };
 		3DE26C2828ABDBE700694F31 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2728ABDBE700694F31 /* Date.swift */; };
 		3DE26C2A28ABF5C100694F31 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2928ABF5C100694F31 /* UITextView.swift */; };
+		3DE26C3028AC14D300694F31 /* CheckNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2F28AC14D300694F31 /* CheckNetwork.swift */; };
+		3DE26C3328AC181400694F31 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C3228AC181400694F31 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		3DE26C2328AB745600694F31 /* ImgaeArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgaeArrayModel.swift; sourceTree = "<group>"; };
 		3DE26C2728ABDBE700694F31 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3DE26C2928ABF5C100694F31 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		3DE26C2F28AC14D300694F31 /* CheckNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNetwork.swift; sourceTree = "<group>"; };
+		3DE26C3228AC181400694F31 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 				3D38F86528A6150F00D122CC /* Base */,
 				3D38F85A28A56D9700D122CC /* Extension */,
 				3D273CEF28A92D60001A2115 /* CustomView */,
+				3DE26C2F28AC14D300694F31 /* CheckNetwork.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				3D273CF428A97A45001A2115 /* UIView.swift */,
 				3DE26C2728ABDBE700694F31 /* Date.swift */,
 				3DE26C2928ABF5C100694F31 /* UITextView.swift */,
+				3DE26C3228AC181400694F31 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -471,10 +477,12 @@
 				3D38F85C28A56DA500D122CC /* Color.swift in Sources */,
 				3DE26C1F28AB557700694F31 /* ExpandScreenImageViewController.swift in Sources */,
 				3DE26C2228AB593A00694F31 /* ExpandScreenImgViewModel.swift in Sources */,
+				3DE26C3328AC181400694F31 /* UIViewController.swift in Sources */,
 				3D38F82428A5676000D122CC /* AppDelegate.swift in Sources */,
 				3D38F86928A6588200D122CC /* AppStoreResponse.swift in Sources */,
 				3D273CEE28A918F9001A2115 /* ImageWithLabelView.swift in Sources */,
 				3D38F82628A5676000D122CC /* SceneDelegate.swift in Sources */,
+				3DE26C3028AC14D300694F31 /* CheckNetwork.swift in Sources */,
 				3D273CF528A97A45001A2115 /* UIView.swift in Sources */,
 				3DE26C2A28ABF5C100694F31 /* UITextView.swift in Sources */,
 				3D38F86728A6152000D122CC /* BaseViewController.swift in Sources */,
