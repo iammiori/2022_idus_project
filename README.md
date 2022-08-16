@@ -21,11 +21,6 @@
 </Blockquote>
 
 - [X] 검색결과가 없을때, 유저가 인지할 수 있도록 검색결과가 없음을 표시했습니다.
-
-|결과가 없을때|결과가 있을때|
-|:---:|:---:|
-|<img width="230" alt="결과없을때" src="https://user-images.githubusercontent.com/46439995/184843053-9792b3b7-29b7-4c78-a892-117b24d26eeb.png">|<img width="230" alt="결과있을때" src="https://user-images.githubusercontent.com/46439995/184842588-4c19729a-132b-42c3-9b3b-d6da194e4903.png">
-
 - [X] 스크린샷 이미지를 눌렀을 때, 해당 이미지를 크게볼 수 있는 화면을 구현했습니다.(선택한 index로 바로 띄어지게끔 하였습니다)
 - [X] 버전정보와 최근 업데이트 내용을 불러오고, 몇일전에 업데이트를 진행하였는지 표시했습니다.
 - [X] 앱의 크기를 MB를 변환하여 
@@ -65,3 +60,21 @@
 ### 2. 검색 버튼 활성
 - 아무 것도 입력을 하지 않았을때 검색버튼을 비활성화시켜놓고, 입력을 시작하면 활성화(+색 변경)시켰습니다.
 - 사용자는 입력을 했을때, 검색버튼이 색이 바뀜을 인식하고 검색버튼을 누를수 있다고 판단하였습니다.
+
+## 📱 기능별 화면 GIF
+<Blockquote>
+시뮬레이터: iPhone13, iOS15.5 로 진행하였습니다
+</Blockquote>
+
+<div align="left">
+
+|<img width=240 src="https://user-images.githubusercontent.com/46439995/184966346-d8d5933a-b8b2-4a1d-a65f-ab432affe327.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184971827-ed35f56a-3b8a-4ed9-8861-acf7ef23289c.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972260-987c7224-7660-43df-88e1-8b94e25b02de.gif">|
+|:-:|:-:|:-:|
+|`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
+|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
+|`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 카카오는 버튼이 보임)`| 
+
+
+
+
+</div>
