@@ -17,9 +17,12 @@ struct AppStoreResult: Codable {
     let sellerName: String
     let description: String
     let screenshotUrls: [String]
+    let releaseNotes: String
+    let version: String
+    let currentVersionReleaseDate: String
 }
 
 extension AppStoreResponse {
     static let EMPTY = AppStoreResponse(resultCount: -1, results: [])
-    static let PASSED = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "", artworkUrl60: "", sellerName: "", description: "", screenshotUrls: [])])
+    static let PASSED = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "", artworkUrl60: "", sellerName: "", description: "", screenshotUrls: [], releaseNotes: "", version: "", currentVersionReleaseDate: "")])
 }
