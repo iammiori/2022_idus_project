@@ -42,13 +42,15 @@
 </Blockquote>
 
 ### 🚜 Combine
-- 애플에서 직접 제공하는 First Party Framework
+- 애플에서 직접 제공하는 First Party Framework을 사용하여 비동기프로그래밍에 도전하였습니다.
+- 네트워크 로직에 사용하여, 데이터를 받아오는 시점에서부터 뷰에 그려지기까지 하나의 스트림으로 데이터를 바인딩해주었습니다.
 
 ### 🛠 MVVM
-- MVVM
+- MVVM 패턴을 적용하여, 뷰는 화면을 그리는 역할/ 뷰모델은 데이터 가공과 로직을 실행하는 역할로 나누어 구현했습니다.
+- 뷰에 뿌릴 값들을 뷰모델에서 가공하고, 이를 유닛 테스트를 통해 검증할 수 있었습니다. 
 
 ### ♻️ 재사용 가능한 Custom View
-- 여러번 쓰이는 뷰들을 custom view 따로 구현했습니다.
+- 여러번 쓰이는 뷰들을 custom View 따로 구현했습니다.
 
 ### ✏️ UnitTest 진행
 - 테스트코드를 작성하여 뷰모델을 검증하였습니다. 
@@ -76,7 +78,7 @@
 |:-:|:-:|:-:|
 |`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
 |<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
-|`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 카카오는 버튼이 보임)`| 
+|`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
 
 
 
