@@ -36,6 +36,14 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        searchBar.text = ""
+        searchBar.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        searchBar.resignFirstResponder()
+    }
     private func setNaviBarButton() {
         self.navigationItem.titleView = searchBar
         let backBtn = UIBarButtonItem(image: UIImage(systemName: "arrow.left"),
@@ -64,7 +72,6 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     private func setAttribute() {
         searchBar.delegate = self
         searchBar.keyboardType = .asciiCapableNumberPad
-        searchBar.becomeFirstResponder()
         if #available(iOS 13.0, *) {
             searchBar.searchBarStyle = .default
             searchBar.searchTextField.backgroundColor = UIColor.black.withAlphaComponent(0.1)
