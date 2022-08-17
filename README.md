@@ -71,19 +71,17 @@
 
 ## 📱 기능별 화면 GIF
 <Blockquote>
-시뮬레이터: iPhone13, iOS15.5 로 진행하였습니다.<br>
+시뮬레이터: iPhone13ProMax, iOS15.5 로 진행하였습니다.<br>
 네트워크 연결 확인을 위해 실제 디바이스(iphone 12pro, iOS15.6)을 사용했습니다.
 </Blockquote>
 
 <div align="left">
 
-|<img width=240 src="https://user-images.githubusercontent.com/46439995/185067434-c71f35dd-3db5-41c9-ad73-39c3301043b1.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184971827-ed35f56a-3b8a-4ed9-8861-acf7ef23289c.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972260-987c7224-7660-43df-88e1-8b94e25b02de.gif">|
+|<img width=240 src="https://user-images.githubusercontent.com/46439995/185067434-c71f35dd-3db5-41c9-ad73-39c3301043b1.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185071000-b96ddd72-52df-45b8-858f-3a065a438708.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185071150-71d08bb5-d9d5-430e-8fe7-44a39a07ff88.gif">|
 |:-:|:-:|:-:|
 |`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
-|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
-|`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
-
-
+|<img width=240 src="https://user-images.githubusercontent.com/46439995/185071684-03fa47f5-17bd-4672-a5be-f825c17c5081.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185071892-9c3ff182-39d9-4d46-bdbc-ab28a8218214.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185072009-8b842d21-069c-4410-8f67-6bb77481f96c.gif">|
+|`이미지탐색<br>(페이징가능)`|`이미지확대<br>(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
 
 
 ## 🗓 프로젝트 일정 관리
