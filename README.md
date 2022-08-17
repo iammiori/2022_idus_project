@@ -81,7 +81,7 @@
 |:-:|:-:|:-:|
 |`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
 |<img width=240 src="https://user-images.githubusercontent.com/46439995/185071684-03fa47f5-17bd-4672-a5be-f825c17c5081.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185071892-9c3ff182-39d9-4d46-bdbc-ab28a8218214.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/185072009-8b842d21-069c-4410-8f67-6bb77481f96c.gif">|
-|`이미지탐색<br>(페이징가능)`|`이미지확대<br>(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
+|`이미지탐색`<br>`(페이징가능)`|`이미지확대`<br>`(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
 
 
 ## 🗓 프로젝트 일정 관리
