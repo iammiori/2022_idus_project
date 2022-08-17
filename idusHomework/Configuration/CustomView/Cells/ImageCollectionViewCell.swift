@@ -8,6 +8,7 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
+    
     static let registerID = "\(UICollectionViewCell.self)"
     
     let imgView: UIImageView = {

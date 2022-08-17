@@ -14,7 +14,6 @@ class FirstSearchBarView: UIView {
         lb.text = "APP_ID를 입력해주세요."
         lb.textColor = .systemGray2
         lb.font = .systemFont(ofSize: 14, weight: .semibold)
-        //lb.sizeToFit()
         return lb
     }()
     let searchImageView: UIImageView = {
@@ -49,7 +48,6 @@ class FirstSearchBarView: UIView {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         NSLayoutConstraint.activate([
-            //self.widthAnchor.constraint(lessThanOrEqualToConstant: ScreenConstant.deviceWidth),
             self.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.1),
             
             titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),

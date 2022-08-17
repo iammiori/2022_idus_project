@@ -27,7 +27,7 @@ class FirstViewController: BaseViewController {
         searchBar.addGestureRecognizer(tapGesture)
     }
     
-    private func setNaviBackButton() {//arrow.backward
+    private func setNaviBackButton() {
         let backBarButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backBarButton
     }
@@ -52,7 +52,6 @@ class FirstViewController: BaseViewController {
 }
 
 extension FirstViewController {
-   // 3. this method is called when a tap is recognized
    @objc func handleTap(sender: UITapGestureRecognizer) {
        let nextVC = SearchViewController()
        self.navigationController?.pushViewController(nextVC, animated: true)

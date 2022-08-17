@@ -9,10 +9,11 @@ import Foundation
 import Combine
 
 final class NetworkService {
+    
     let session: URLSession
     
     init(configuration: URLSessionConfiguration) {
-    session = URLSession(configuration: configuration)
+        session = URLSession(configuration: configuration)
     }
     
     func fetchInfo<T>(_ resource: NetworkResource<T>) -> AnyPublisher<T, Error> {

@@ -61,7 +61,6 @@ final class SearchViewModel {
             .receive(on: RunLoop.main)
             .sink { completion in
                 print("completion: \(completion)")
-                //에러처리
                 switch completion {
                 case .failure(let error):
                     self.searchedModel.send(nil)

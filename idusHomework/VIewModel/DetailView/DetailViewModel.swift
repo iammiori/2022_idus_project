@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 final class DetailViewModel {
+    
     @Published private(set) var appInfo: AppStoreResponse?
     
     init(appInfo: AppStoreResponse) {
