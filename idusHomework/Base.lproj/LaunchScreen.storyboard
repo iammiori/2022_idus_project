@@ -18,19 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dnl-DD-Cat">
-                                <rect key="frame" x="100" y="405" width="214" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Dnl-DD-Cat" secondAttribute="height" multiplier="5:2" id="eGH-Ia-eth"/>
-                                </constraints>
+                                <rect key="frame" x="182" y="438" width="50" height="20"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dnl-DD-Cat" secondAttribute="trailing" constant="100" id="1uN-ZI-yYg"/>
                             <constraint firstItem="Dnl-DD-Cat" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2RF-hr-5st"/>
                             <constraint firstItem="Dnl-DD-Cat" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cIn-Rk-gZf"/>
-                            <constraint firstItem="Dnl-DD-Cat" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fKR-wc-jup"/>
                         </constraints>
                     </view>
                 </viewController>
