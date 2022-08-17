@@ -13,7 +13,12 @@ class PreviewCollectionView: UICollectionView {
     let flowLayout = UICollectionViewFlowLayout()
  
     var cellsize: CGSize {
-        let width = ScreenConstant.deviceWidth * 0.6
+        let width =  ScreenConstant.deviceWidth * 0.6
+        let height = width * PreviewImg.ratio
+        return CGSize(width: width, height: height)
+    }
+    var bigCellSize: CGSize {
+        let width =  ScreenConstant.deviceWidth * 0.7
         let height = width * PreviewImg.ratio
         return CGSize(width: width, height: height)
     }
