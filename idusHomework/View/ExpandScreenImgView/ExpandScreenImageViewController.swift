@@ -52,10 +52,10 @@ class ExpandScreenImageViewController: BaseViewController {
             dismissButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 12),
             dismissButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -12),
             
-            imageCollectionView.topAnchor.constraint(equalTo: self.dismissButton.bottomAnchor, constant: 10),
-            imageCollectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            imageCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            imageCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            imageCollectionView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            imageCollectionView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            imageCollectionView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            imageCollectionView.heightAnchor.constraint(equalToConstant: imageCollectionView.bigCellSize.height)
         ])
     }
     private func setCollectionView() {
@@ -90,8 +90,8 @@ extension ExpandScreenImageViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = ScreenConstant.deviceWidth - 100
-        let height = width * PreviewImg.ratio
+        let width = imageCollectionView.bigCellSize.width
+        let height = collectionView.bounds.height
         return CGSize(width: width, height: height)
     }
 }
