@@ -16,5 +16,6 @@ final class ExpandScreenImgViewModel {
     }
     
     var numberOfpreviewArr: Int {
-        return screenImgArr.previewUrls.count    }
+        return screenImgArr.previewUrls.count
+    }
 }
