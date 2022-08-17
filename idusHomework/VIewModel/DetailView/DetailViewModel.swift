@@ -74,8 +74,12 @@ final class DetailViewModel {
     var numberOfpreviewArr: Int {
         return previewURLArr.count
     }
-    var fileSizeMega: String {
+    var korGenre: String {
+        let originGenre = appInfo?.results[0].primaryGenreName ?? ""
+        return originGenre.localized()
+    }
+    var corpNameANdfileSizeAndGenre: String {
         let fileSize = Int64(appInfo?.results[0].fileSizeBytes ?? "0")
-        return "\(corpName)\n크기: \(convertByteToMB(fileSize!))"
+        return "\(corpName)\n크기: \(convertByteToMB(fileSize!))  /  장르: \(korGenre)"
     }
 }
