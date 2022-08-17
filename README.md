@@ -29,6 +29,9 @@
 - [X] 버전정보와 최근 업데이트 내용을 불러오고, 몇일전에 업데이트를 진행하였는지 표시했습니다.
 - [X] 앱의 크기를 MB를 변환하여 표시했습니다.
 - [X] 네트워크 연결상태를 확인하여, 연결이 안되어있을 때 설정앱으로 이동할수 있게끔 구현했습니다.
+- [X] 스크린샷 이미지 페이징을 구현하였습니다.
+- [X] 이미지 캐싱을 이용해, 캐시에 저장해서 빠르게 이미지를 처리할 수 있게 했습니다.
+ 
 
 ## 🛠 Architecture : MVVM
 <Blockquote>
@@ -79,8 +82,6 @@
 |`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
 |<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
 |`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
-
-
 
 
 </div>
