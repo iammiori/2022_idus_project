@@ -44,6 +44,7 @@
 		3DE26C3328AC181400694F31 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C3228AC181400694F31 /* UIViewController.swift */; };
 		3DE26C4C28ACBAF300694F31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE26C4E28ACBAF300694F31 /* Localizable.strings */; };
 		3DE26C5128ACBC2C00694F31 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C5028ACBC2C00694F31 /* String.swift */; };
+		3DE26C5328ACCB4700694F31 /* ExpandableScreenImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C5228ACCB4700694F31 /* ExpandableScreenImageViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		3DE26C4D28ACBAF300694F31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3DE26C4F28ACBB2100694F31 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3DE26C5028ACBC2C00694F31 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3DE26C5228ACCB4700694F31 /* ExpandableScreenImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableScreenImageViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				3D38F83A28A5676400D122CC /* idusHomeworkTests.swift */,
 				3DA6E07528A8D6F400CEB3B0 /* SearchViewModelTests.swift */,
 				3DE26C1B28AA6DCE00694F31 /* DetailViewModelTests.swift */,
+				3DE26C5228ACCB4700694F31 /* ExpandableScreenImageViewModelTests.swift */,
 			);
 			path = idusHomeworkTests;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 			files = (
 				3DA6E07628A8D6F400CEB3B0 /* SearchViewModelTests.swift in Sources */,
 				3D38F83B28A5676400D122CC /* idusHomeworkTests.swift in Sources */,
+				3DE26C5328ACCB4700694F31 /* ExpandableScreenImageViewModelTests.swift in Sources */,
 				3DE26C1C28AA6DCE00694F31 /* DetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
