@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 class DetailViewController: BaseViewController {
-
+    
     var viewModel: DetailViewModel
     var subscriptions = Set<AnyCancellable>()
     
@@ -78,9 +78,12 @@ class DetailViewController: BaseViewController {
             
             previewView.heightAnchor.constraint(equalToConstant: previewView.cellsize.height)
         ])
-
+        
     }
     private func setCollectionView() {
+        guard let layout = previewView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        layout.itemSize = CGSize(width: previewView.cellsize.width, height: previewView.cellsize.height)
+        layout.minimumLineSpacing = itemSpacing
         previewView.delegate = self
         previewView.dataSource = self
     }
@@ -152,11 +155,23 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: itemSpacing, bottom: 0, right: itemSpacing) 
+        return UIEdgeInsets(top: 0, left: itemSpacing, bottom: 0, right: itemSpacing)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = previewView.cellsize.width + itemSpacing
+        let width = previewView.cellsize.width
         let height = collectionView.bounds.height
         return CGSize(width: width, height: height)
+    }
+}
+
+extension DetailViewController: UIScrollViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        guard let layout = self.previewView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        let cellWidthPlusSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthPlusSpacing
+        let roundedIndex: CGFloat = round(index)
+        offset = CGPoint(x: (roundedIndex * cellWidthPlusSpacing - scrollView.contentInset.left) - (cellWidthPlusSpacing * 0.15) , y: scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
     }
 }
