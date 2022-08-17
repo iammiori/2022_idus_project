@@ -10,3 +10,7 @@ import Foundation
 struct PreviewImgUrls {
     let previewUrls: [String]
 }
+
+extension PreviewImgUrls {
+    static let EMPTY = PreviewImgUrls(previewUrls: [])
+}
