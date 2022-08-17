@@ -36,10 +36,8 @@ class SearchViewModelTests: XCTestCase {
     
     func test_검색결과가있을때_버튼_hidden이_false인지() {
         //given
-        let model = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "testTrackName", artworkUrl60: "testArtworkUrl60",
-                                                                              sellerName: "testSellerName",
-                                                                              description: "testDescription",
-                                                                              screenshotUrls: ["test1","test2","test3"])])
+        let model = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "testTrackName", artworkUrl60: "testArtworkUrl60", sellerName: "testSellerName", description: "testDescription", screenshotUrls: ["test1","test2","test3"], releaseNotes: "testRelease", version: "testVersion", currentVersionReleaseDate: "testDate", fileSizeBytes: "12345", primaryGenreName: "testPrimaryGenre")])
+       
         let viewModel = SearchViewModel(searchedModel: model)
         //when
         //then
@@ -57,14 +55,11 @@ class SearchViewModelTests: XCTestCase {
     
     func test_검색결과가있을때_model의_데이터가_의도된대로_viewModel프로퍼티에_담기는지() {
         //given
-        let model = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "testTrackName", artworkUrl60: "testArtworkUrl60",
-                                                                              sellerName: "testSellerName",
-                                                                              description: "testDescription",
-                                                                              screenshotUrls: ["test1","test2","test3"])])
+        let model = AppStoreResponse(resultCount: 1, results: [AppStoreResult(trackName: "testTrackName", artworkUrl60: "testArtworkUrl60", sellerName: "testSellerName", description: "testDescription", screenshotUrls: ["test1","test2","test3"], releaseNotes: "testRelease", version: "testVersion", currentVersionReleaseDate: "testDate", fileSizeBytes: "12345", primaryGenreName: "testPrimaryGenre")])
         let viewModel = SearchViewModel(searchedModel: model)
         //when
         //then
-        XCTAssertEqual(viewModel.name, "testSellerName")
+        XCTAssertEqual(viewModel.name, "testTrackName")
         XCTAssertEqual(viewModel.logoImgURL, "testArtworkUrl60")
     }
     
