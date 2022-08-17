@@ -24,21 +24,19 @@
 추가적으로 구현한 부분입니다. 
 </Blockquote>
 
+- [X] 네트워크 연결상태를 확인하여, 연결이 안되어있을 때 설정앱으로 이동할수 있게끔 구현했습니다.
 - [X] 검색결과가 없을때, 유저가 인지할 수 있도록 검색결과가 없음을 표시했습니다.
-- [X] 스크린샷 이미지를 눌렀을 때, 해당 이미지를 크게볼 수 있는 화면을 구현했습니다.(선택한 index로 바로 띄어지게끔 하였습니다)
-- [X] 버전정보와 최근 업데이트 내용을 불러오고, 몇일전에 업데이트를 진행하였는지 표시했습니다.
 - [X] 앱의 크기를 MB를 변환하여 표시했습니다.
 - [X] 앱의 주요 장르를 받아와(영어), 다국어 설정을 통해 한글로 변환하여 표시했습니다
-- [X] 네트워크 연결상태를 확인하여, 연결이 안되어있을 때 설정앱으로 이동할수 있게끔 구현했습니다.
+- [X] 버전정보와 최근 업데이트 내용을 불러오고, 몇일전에 업데이트를 진행하였는지 표시했습니다.
 - [X] 스크린샷 이미지 페이징을 구현하였습니다.
 - [X] 이미지 캐싱을 이용해, 캐시에 저장해서 빠르게 이미지를 처리할 수 있게 했습니다.
- 
+- [X] 스크린샷 이미지를 눌렀을 때, 해당 이미지를 크게볼 수 있는 화면을 구현했습니다.(선택한 index로 바로 띄어지게끔 하였습니다)
 
 ## 🛠 Architecture : MVVM
 <Blockquote>
 과제에서 사용하고 있는 프로젝트 구조 입니다.
 </Blockquote>
-
 
 ## 🏋🏻‍♀️ 기술적 도전 
 <Blockquote>
@@ -73,18 +71,20 @@
 
 ## 📱 기능별 화면 GIF
 <Blockquote>
-시뮬레이터: iPhone13, iOS15.5 로 진행하였습니다
+시뮬레이터: iPhone13, iOS15.5 로 진행하였습니다.<br>
+네트워크 연결 확인을 위해 실제 디바이스(iphone 12pro, iOS15.6)을 사용했습니다.
 </Blockquote>
 
 <div align="left">
 
-|<img width=240 src="https://user-images.githubusercontent.com/46439995/184966346-d8d5933a-b8b2-4a1d-a65f-ab432affe327.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184971827-ed35f56a-3b8a-4ed9-8861-acf7ef23289c.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972260-987c7224-7660-43df-88e1-8b94e25b02de.gif">|
+|<img width=240 src="https://user-images.githubusercontent.com/46439995/185067434-c71f35dd-3db5-41c9-ad73-39c3301043b1.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184971827-ed35f56a-3b8a-4ed9-8861-acf7ef23289c.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972260-987c7224-7660-43df-88e1-8b94e25b02de.gif">|
 |:-:|:-:|:-:|
 |`네트워크 없을때 설정으로`|`검색버튼 입력시 활성`|`펼치기 접기기능`<br>`(글이 기준보다 적으면, 버튼숨김)`|
 |<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
 |`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
 
-</div>
+
+
 
 ## 🗓 프로젝트 일정 관리
 <Blockquote>
