@@ -83,5 +83,11 @@
 |<img width=240 src="https://user-images.githubusercontent.com/46439995/184972566-9642910f-0464-49b0-b491-e0fa7aa04169.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184972686-dce7494f-f35a-4fc1-8fce-bcb617298b89.gif">|<img width=240 src="https://user-images.githubusercontent.com/46439995/184973193-c3aadbc1-a1c8-4fcc-baa3-a26d6fb55b7c.gif">|
 |`이미지탐색`|`이미지확대(해당인덱스로이동)`|`펼치기 접기기능`<br>`(새로운기능 글이 긴 앱은 버튼이 보임)`| 
 
-
 </div>
+
+## 🗓 프로젝트 일정 관리
+<Blockquote>
+프로젝트를 진행할 때, 지라를 사용하여 이슈와 일정을 관리하였습니다. 그리고 깃허브와 연동하여, PR과 커밋을 관리했습니다. (ex: 이슈넘버 feat: ...)
+</Blockquote>
+<img width="600" alt="스크린샷 2022-08-14 오후 4 33 59" src="https://user-images.githubusercontent.com/46439995/185040034-8fa12e10-5d61-491e-9985-d23f3fc47db0.png">
+
