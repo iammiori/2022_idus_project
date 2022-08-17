@@ -120,7 +120,7 @@ class DetailViewController: BaseViewController {
                 let numberOfLine: Int = self.versionView.textView.getNumberOfLine()
                 self.versionView.expandableButton.isHidden = self.viewModel.checkNumberOfLine(numberOfLine)
                 self.appInfoView.textLabel.text = self.viewModel.appName
-                self.appInfoView.subTitleLabel.text = self.viewModel.fileSizeMega
+                self.appInfoView.subTitleLabel.text = self.viewModel.corpNameANdfileSizeAndGenre
                 self.appInfoView.imageView.loadImagefromURL(stringURL: self.viewModel.appLogoURL)
                 self.descriptionView.textView.text = self.viewModel.description
                 let numberOfLine2: Int = descriptionView.textView.getNumberOfLine()
