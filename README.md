@@ -4,6 +4,9 @@
 - 과제 기간: 22.08.11 ~ 22.08.17 (7일)
 </Blockquote>
 
+## 🎥 최종 구현 영상 
+[최종구현영상 youtube 링크입니다](https://youtu.be/7yrryKOc3k0)
+
 ## ⚙️ 개발환경
 - Xcode: 13.4.1
 - Swift: 5.6.1
