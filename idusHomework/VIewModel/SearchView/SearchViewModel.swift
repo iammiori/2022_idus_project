@@ -35,7 +35,7 @@ final class SearchViewModel {
     
     var name: String {
         if searchedModel.value?.resultCount ?? 0 > 0 {
-            return searchedModel.value?.results[0].sellerName ?? ""
+            return searchedModel.value?.results[0].trackName ?? ""
         } else if searchedModel.value?.resultCount ?? 0 == 0 {
             return "검색결과가 없습니다"
         } else {
