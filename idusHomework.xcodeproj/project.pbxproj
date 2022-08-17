@@ -42,7 +42,6 @@
 		3DE26C2A28ABF5C100694F31 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2928ABF5C100694F31 /* UITextView.swift */; };
 		3DE26C3028AC14D300694F31 /* CheckNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C2F28AC14D300694F31 /* CheckNetwork.swift */; };
 		3DE26C3328AC181400694F31 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE26C3228AC181400694F31 /* UIViewController.swift */; };
-		3DE26C3F28ACB60200694F31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE26C4128ACB60200694F31 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +101,6 @@
 		3DE26C2928ABF5C100694F31 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		3DE26C2F28AC14D300694F31 /* CheckNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNetwork.swift; sourceTree = "<group>"; };
 		3DE26C3228AC181400694F31 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		3DE26C4028ACB60200694F31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +245,6 @@
 		3D38F85728A568D700D122CC /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				3DE26C4128ACB60200694F31 /* Localizable.strings */,
 				3D38F85F28A591F300D122CC /* Constant.swift */,
 				3D38F86528A6150F00D122CC /* Base */,
 				3D38F85A28A56D9700D122CC /* Extension */,
@@ -442,7 +439,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D38F83028A5676400D122CC /* LaunchScreen.storyboard in Resources */,
-				3DE26C3F28ACB60200694F31 /* Localizable.strings in Resources */,
 				3D38F82D28A5676400D122CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,14 +536,6 @@
 				3D38F82F28A5676400D122CC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3DE26C4128ACB60200694F31 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DE26C4028ACB60200694F31 /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
