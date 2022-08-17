@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 class PreviewCollectionView: UICollectionView {
+    
     var subscriptions = Set<AnyCancellable>()
     let flowLayout = UICollectionViewFlowLayout()
  

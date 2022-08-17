@@ -11,6 +11,7 @@ enum Align {
     case leading
     case center
 }
+
 class ImageWithLabelView: UIView {
     
     let textLabel: UILabel = {
