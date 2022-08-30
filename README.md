@@ -96,3 +96,14 @@
 </Blockquote>
 <img width="600" alt="스크린샷 2022-08-14 오후 4 33 59" src="https://user-images.githubusercontent.com/46439995/185040034-8fa12e10-5d61-491e-9985-d23f3fc47db0.png">
 
+--- 
+## 🚀 과제이후 코드리뷰
+<Blockquote>
+과제를 진행후, 스스로 코드리뷰를 진행한 기록입니다.
+</Blockquote>
+
+- `PreviewCollectionView.swift`: reloadData 해줄 필요 없음 [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/18#pullrequestreview-1088783843)
+- `SearchViewModel.swift` : print 문 지우기 [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/37/files/b326f508f7c2d2f98ac78d07ea16d0ea3f2bc935#r957149011)
+- `DetailViewModel.swift` : 굳이 combine을 써야할까 (이미 받은 값전달이기때문에) [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/37/files/b326f508f7c2d2f98ac78d07ea16d0ea3f2bc935#r958562344)
+ 
+
