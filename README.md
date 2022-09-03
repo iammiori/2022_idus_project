@@ -105,5 +105,12 @@
 - `PreviewCollectionView.swift`: reloadData 해줄 필요 없음 [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/18#pullrequestreview-1088783843)
 - `SearchViewModel.swift` : print 문 지우기 [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/37/files/b326f508f7c2d2f98ac78d07ea16d0ea3f2bc935#r957149011)
 - `DetailViewModel.swift` : 굳이 combine을 써야할까 (이미 받은 값전달이기때문에) [코드리뷰링크](https://github.com/iammiori/2022_idus_project/pull/37/files/b326f508f7c2d2f98ac78d07ea16d0ea3f2bc935#r958562344)
- 
 
+---
+ ## ➕보완해야할 점
+<Blockquote>
+과제 진행후, 보완해야할 점에 대한 기록입니다.
+</Blockquote>
+
+- [ ] 이미지 캐싱 시 if문 depth가 너무 깊은 점 
+- [ ] 강제 언랩핑을 쓴 부분 
