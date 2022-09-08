@@ -1,5 +1,5 @@
-# 2022_idus_project
-2022 아이디어스 채용 과제 레포짓입니다.
+# SearchAppStore
+2022 아이디어스 채용으 위한 과제 레포짓 입니다.
 <Blockquote>
 - 과제 기간: 22.08.11 ~ 22.08.17 (7일)
 </Blockquote>
