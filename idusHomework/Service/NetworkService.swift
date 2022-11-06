@@ -8,7 +8,10 @@
 import Foundation
 import Combine
 
-final class NetworkService {
+protocol NetworkServiceProtocol {
+    func fetchInfo<T>(_ resource: NetworkResource<T>) -> AnyPublisher<T, Error>
+}
+final class NetworkService: NetworkServiceProtocol {
     
     let session: URLSession
     

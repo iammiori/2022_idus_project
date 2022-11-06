@@ -27,6 +27,15 @@ class SearchViewController: BaseViewController, UIGestureRecognizerDelegate {
     var viewModel: SearchViewModel!
     var subscriptions = Set<AnyCancellable>()
     
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+
+    init(viewModel: SearchViewModel) { // Abstraction dependency
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SearchViewModel(network: NetworkService(configuration: .default), searchedModel: AppStoreResponse.EMPTY)
