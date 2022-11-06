@@ -15,10 +15,16 @@ enum SearchState {
 
 final class SearchViewModel {
     
-    let networkService: NetworkService
+    //let networkService: NetworkService
+    let networkServiceProtocol: NetworkServiceProtocol
     
-    init(network: NetworkService = NetworkService(configuration: .default), searchedModel: AppStoreResponse?) {
-        self.networkService = network
+//    init(network: NetworkService = NetworkService(configuration: .default), searchedModel: AppStoreResponse?) {
+//        self.networkService = network
+//        self.searchedModel = CurrentValueSubject(searchedModel)
+//    }
+    
+    init(network: NetworkServiceProtocol, searchedModel: AppStoreResponse?) {
+        self.networkServiceProtocol = network
         self.searchedModel = CurrentValueSubject(searchedModel)
     }
     
@@ -57,7 +63,7 @@ final class SearchViewModel {
                                                          params: ["id":appID],
                                                          header: [:],
                                                          httpMethod: "GET")
-        networkService.fetchInfo(resource)
+        networkServiceProtocol.fetchInfo(resource)
             .receive(on: RunLoop.main)
             .sink { completion in
                 print("completion: \(completion)")

@@ -53,7 +53,8 @@ class FirstViewController: BaseViewController {
 
 extension FirstViewController {
    @objc func handleTap(sender: UITapGestureRecognizer) {
-       let nextVC = SearchViewController()
+       let searchVM = SearchViewModel(network: NetworkService(configuration: .default), searchedModel: AppStoreResponse.EMPTY)
+       let nextVC = SearchViewController(viewModel: searchVM)
        self.navigationController?.pushViewController(nextVC, animated: true)
    }
 }
